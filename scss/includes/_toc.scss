@@ -1,0 +1,20 @@
+.toc-page {
+    font-size: 110%;
+    ol {
+        counter-reset: item;
+        font-weight: 600;
+        ol {
+            font-weight: 300;
+            ol {
+                font-size: 90%;
+            }
+        }
+    }
+    li {
+        display: block
+    }
+    li:before {
+        content: counters(item, ".") " ";
+        counter-increment: item
+    }
+}

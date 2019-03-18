@@ -1,0 +1,25 @@
+<ul class="{{class}}">
+    <li>
+        <a href="#">
+            <span class="fa-stack fa-2x logo">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-graduation-cap fa-stack-1x fa-inverse inverse-logo"></i>
+            </span>
+        </a>
+    </li>
+    {% for crumb in crumbs %}
+        {% if not loop.last %}
+            {% if crumb.routable %}
+                <li class="mobile-noshow"><a class="hover-cursor-default" href="{{ crumb.url }}" itemprop="url"><span></span><span itemprop="title">{{ crumb.menu }}</span></a></li>
+            {% else  %}
+                <li class="mobile-noshow"><a class="hover-cursor-default" href="#" itemprop="url"><span></span><span itemprop="title">{{ crumb.menu }}</span></a></li>
+            {% endif %}
+        {% else %}
+            {% if breadcrumbs_config.link_trailing %}
+                <li class="small-mobile-noshow"><a class="hover-cursor-default" href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a></li>
+            {% else %}
+                <li class="small-mobile-noshow"><a class="hover-cursor-default" href="#" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a></li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>

@@ -1,0 +1,14 @@
+name: Rana
+version: 0.1.0
+description: Desktop first GRAV theme with mobile first mobile support:-)
+icon: rebel
+author:
+  name: Matthias Danzinger
+  email: matthias.danzinger@gmail.com
+homepage: https://github.com/matthias-danzinger/grav-theme-rana
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/matthias-danzinger/grav-theme-rana/issues
+readme: https://github.com/matthias-danzinger/grav-theme-rana/blob/develop/README.md
+license: MIT
+

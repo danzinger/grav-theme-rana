@@ -1,0 +1,41 @@
+
+$font-scaler: 1.3;
+.content-header {
+    position: absolute;
+    z-index: -1;
+    .main-content-header-bg {
+        position: absolute;
+        top: 0;
+        max-width: 100vw;
+        overflow: hidden;
+        font-weight: 700;
+        background-image: linear-gradient($primary-lighten-37, $primary-lighten-45);
+        height: 300px;
+        @media only screen and (max-width: $breakpoint-sm-md) {
+            height: 170px;
+        }
+        @media only screen and (max-width: $breakpoint-xs-sm) {
+            height: 120px;
+        }
+        .main-content-header-bg-text {
+            line-height: 0.8;
+            min-width: 100vw;
+            color: $primary-lighten-45;
+            font-size: 61.54vh;
+            @media only screen and (max-width: $breakpoint-sm-md) {
+                font-size: 292.31px;
+            }
+            @media only screen and (max-width: $breakpoint-xs-sm) {
+                font-size: 238.46px;
+            }
+        }
+    }
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 1050px;
+    height: 100%;
+}
+

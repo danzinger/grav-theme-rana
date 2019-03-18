@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="breadcrumbs-wrapper">
+    {% if config.plugins.breadcrumbs.enabled %}
+        {% include 'partials/breadcrumbs-navbar-container.html.twig' %}
+    {% endif %} 
+    </div>
+    <div class="buttons-wrapper">
+        <ul class="primary-nav-ul">
+            <li id="toggle-button" class="navbar-button-li menu-button">
+                <div class="toggle-button hamburger hamburger--spin-r">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
