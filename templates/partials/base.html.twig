@@ -30,22 +30,27 @@
 
 {% endblock head %}
 </head>
-<body id="top">
+<body class="">
  
-{% block menu %}
+{% block menu %} 
      <div class="main-nav" id="menu"> 
         {% include 'partials/navigation.html.twig' %}
      </div> 
 {% endblock %}
 
 {% block panel %}
-    <div class="panel" id="panel">
+    <div class="panel site" id="panel">
         {% block navbartop %}
             {% include 'partials/navbartop.html.twig' %}
         {% endblock %}
-        {% block content %}{% endblock %}
+        <div class="site-content">
+            {% block content %}{% endblock %} 
+        </div>
+        {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %} 
     </div>
-{% endblock %}
+{% endblock %} 
 
 {% block bottom %}
     {{ assets.js('bottom') }}

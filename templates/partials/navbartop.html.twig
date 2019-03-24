@@ -6,6 +6,12 @@
     </div>
     <div class="buttons-wrapper">
         <ul class="primary-nav-ul">
+            <a href="{{ base_url }}/search">
+                <li id="search-button" class="navbar-button-li search-button">
+                    <i class="fas fa-search search-logo"></i>
+                </li>
+            </a>
+    {% if config.plugins.breadcrumbs.enabled %}
             <li id="toggle-button" class="navbar-button-li menu-button">
                 <div class="toggle-button hamburger hamburger--spin-r">
                     <div class="hamburger-box">
@@ -13,6 +19,7 @@
                     </div>
                 </div>
             </li>
+    {% endif %} 
         </ul>
     </div>
 </header>

@@ -1,13 +1,13 @@
 
 # Rana Theme
 
-The **Rana** Theme is for [Grav CMS](http://github.com/getgrav/grav). It is inspired by the amazing [Learn2](https://github.com/getgrav/grav-theme-learn2) Theme, but keeps things more simple. It is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs). Breadcrumbs are then automatically rendered in the Navbar.
+The **Rana** Theme is for [Grav CMS](http://github.com/getgrav/grav). To see the full capabilities of this theme, it is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) as well as [TNT-Search Plugin](https://github.com/trilbymedia/grav-plugin-tntsearch). 
 
 ![Rana](assets/readme-screenshot.jpg)
 
 ## Description
 
-A simple app-like mobile first and content-focused Grav Theme.
+A simple app-like mobile first and content-focused Grav Theme which is also optimized for large screens.
 
 # Installation
 
@@ -58,8 +58,10 @@ Manually updating Rana is pretty simple. Here is what you will need to do to get
 
 The theme was developed to provide learning materials and course information to students. It is focused on the content, so it is kept very simple. 
 
-* An applike touch slideout navigation menu using [(slideout.js)](https://github.com/Mango/slideout)
-* A structured menu for many subpages optimized for mobile using [(metismenu)](https://github.com/onokumus/metismenu)
+* Breadcrumbs if the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) is used.
+* TNT-Search with searchbar, and decent styling of search results
+* An applike touch slideout navigation menu using [Slideout.js](https://github.com/Mango/slideout)
+* A structured menu for many subpages optimized for mobile using [Metismenu](https://github.com/onokumus/metismenu)
 * No distraction, only content
 
 ## Templates
@@ -107,5 +109,4 @@ For all content of my courses I use plugins like [MathJax](https://github.com/so
 ## Settings
 Only three settings are provided:
 1. Page Title shown in the Menu. To keep it very simple, you need to provide a HTML-String with inline styles here. This turned out to be the easiest solution to have a nice styling for different course names.
-1. Production Mode: Use minified css (without sourcemap)
 1. Hamburger Animation: You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
