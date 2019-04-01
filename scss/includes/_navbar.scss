@@ -58,15 +58,15 @@
     .menu-button {
         background: $nav-primary;
     }
-    .hamburger-inner,
-    .hamburger-inner::after,
-    .hamburger-inner::before {
-        background-color: #ccc;
-    }
+    // .hamburger-inner,
+    // .hamburger-inner::after,
+    // .hamburger-inner::before {
+    //     background-color: #ccc;
+    // }
 }
 
-.search-logo {
-    color: #ccc;
-    font-size: 28px;
-    margin-bottom: 5px;
+.search-logo { 
+    color: $menu-buttons-color;
+    font-size: 28px; 
+    margin-bottom: 5px; 
 }

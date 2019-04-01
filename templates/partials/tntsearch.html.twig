@@ -3,8 +3,9 @@
 {% set snippet = snippet|default(config.get('plugins.tntsearch.snippet', 300)) %}
 {% set min = min|default(config.get('plugins.tntsearch.min', 3)) %}
 {% set search_type = search_type|default(config.get('plugins.tntsearch.search_type', 'auto')) %}
-{% set placeholder = placeholder|default('Search...') %}
-{# {% set placeholder = placeholder|default(config.get('plugins.tntsearch.placeholder', 'Search...x')) %} #}
+{# Get Search Placeholder from Theme config #}
+{% set placeholder = placeholder|default(config.get('theme.placeholder', 'Search...x')) %}
+
 {% set live_update = in_page ? live_update|default(config.get('plugins.tntsearch.live_uri_update', 1)) : 0 %}
 
 {% set options = { uri: url, limit: limit, snippet: snippet, min: min, in_page: in_page, live_update: live_update, search_type: search_type } %}

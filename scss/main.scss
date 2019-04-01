@@ -1,5 +1,6 @@
 $font-color: #444;  
 $nav-primary: #467a91;
+$menu-buttons-color: #ccc;
 $link-color:$nav-primary;
 $link-hover-color:lighten($link-color, 15%);
 $primary-lighten-7: lighten($nav-primary, 7%);
@@ -18,85 +19,51 @@ $z-index-above-all-content: 999;
 $breakpoint-xs-sm: 400px;
 $breakpoint-sm-md: 700px;
 $breakpoint-lg-xl: 1170px;  
+
+$notice-warning: "Warning" !default;
+$notice-info: "Info" !default;
+$notice-tip: "Tip" !default;
+$notice-note: "Note" !default; 
+
+// Hamburger Settings
+// ==================================================
+$hamburger-padding-x           : 0px !default;
+$hamburger-padding-y           : 0px !default;
+$hamburger-layer-width         : 32px !default;
+$hamburger-layer-height        : 5px !default;
+$hamburger-layer-spacing       : 5px !default;
+$hamburger-layer-color         : $menu-buttons-color;
+$hamburger-layer-border-radius : 4px !default;
+$hamburger-hover-opacity       : 1 !default;
+$hamburger-active-layer-color  : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
 @import 'includes/vendor/normalize.min';
-@import 'includes/vendor/slideout'; 
-@import 'includes/vendor/metismenu';
-@import 'includes/vendor/hamburgers';
 @import 'includes/mixins';
+@import 'includes/vendor/slideout'; 
+@import 'includes/vendor/metismenu'; 
+@import 'includes/vendor/hamburgers/hamburgers';
+@import 'includes/markdown-notices';
 @import 'includes/search';
 @import 'includes/navbar';
 @import 'includes/breadcrumbs'; 
 @import 'includes/default'; 
 @import 'includes/toc';
 @import 'includes/sidebar';
-@import 'includes/sticky-footer'; 
+@import 'includes/sticky-footer';
+@import 'includes/typography'; 
 
-html {
+html { 
     font-family: 'Rubik', sans-serif; 
     overflow-x: hidden;
     line-height: 1.5;
     color: $font-color;
 } 
 
-$min_width: 320px;  
-$max_width: 1200px;
-$min_font: 16px;
-$max_font: 50px;
-
-h1{
-    @include fluid-type($min_width, $max_width, 35px, 90px);
-    margin:35px 0px 10px 0px;
-    position: relative; 
-}
-.default-header{
-    line-height: 0.8; 
-    padding:0px 25px 25px 25px;
-    border-bottom: 5px solid $font-color ;
-}
-h2{
-    @include fluid-type($min_width, $max_width, 20px, 50px);
-    margin:30px 0px 10px 0px;
-    position: relative;
-}
-h3{
-    @include fluid-type($min_width, $max_width, 19px, 45px);
-    margin:25px 0px 10px 0px;
-    position: relative;
-}
-h4{
-    @include fluid-type($min_width, $max_width, 18px, 40px);
-    margin:20px 0px 10px 0px;
-    position: relative;
-}
-h5{
-    @include fluid-type($min_width, $max_width, 17px, 35px);
-    margin:15px 0px 10px 0px;
-    position: relative;
-} 
-h6{
-    @include fluid-type($min_width, $max_width, 16px, 30px);
-    margin:10px 0px 8px 0px;
-    position: relative;
-}
- 
-p,li,ul{
-    @include fluid-type($min_width, $max_width, 16px, 25px);
-}
-
-a{
-    @include fluid-type($min_width, $max_width, 16px, 25px);
-    text-decoration: none;
-    color: $link-color;
-    transition: all 0.1s ease-in;
-    &:hover{
-        color: $link-hover-color;
-    }
-}
-
 .small-mobile-noshow {
     @media only screen and (max-width: $breakpoint-xs-sm) {
         display: none!important;
-    }
+    } 
 }
 
 .mobile-noshow {
