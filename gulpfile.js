@@ -44,7 +44,8 @@ gulp.task('sass', function() {
 
 gulp.task('serve', () => {
   browserSync.init({
-      proxy: "http://localhost/website/projects/grav-theme-rana/"
+      proxy: "http://localhost/website/projects/grav-theme-rana/",
+      notify: false
   });
   
   gulp.watch('./scss/**/*.scss', ['sass']).on('change', reload);

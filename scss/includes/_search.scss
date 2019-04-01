@@ -30,12 +30,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 .custom-search {
-    //display: none;
     min-width: 100%;
-    // top: $navbar-height-dt;
-    // @media only screen and (max-width: $breakpoint-lg-xl) {
-    //     top: $navbar-height-mob;
-    // }
+    margin-bottom: 5px;
 }
 
 //prevent chrome user-agent-stylesheet input type="text" padding

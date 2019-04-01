@@ -28,9 +28,26 @@
     {% endblock %} 
     {{ assets.js() }}
 
+    <style>
+     
+    .notices.yellow p::after {
+    content: "{{config.theme.notice.yellow}}";
+    } 
+    .notices.red p::after {
+    content: "{{config.theme.notice.red}}";
+    }
+    .notices.blue p::after {
+    content: "{{config.theme.notice.blue}}";
+    }
+    .notices.green p::after {
+    content: "{{config.theme.notice.green}}";
+    } 
+ 
+    </style>
+
 {% endblock head %}
 </head>
-<body class="">
+<body>
  
 {% block menu %} 
      <div class="main-nav" id="menu"> 

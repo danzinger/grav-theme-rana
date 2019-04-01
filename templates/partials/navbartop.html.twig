@@ -1,8 +1,6 @@
 <header class="header">
     <div class="breadcrumbs-wrapper">
-    {% if config.plugins.breadcrumbs.enabled %}
         {% include 'partials/breadcrumbs-navbar-container.html.twig' %}
-    {% endif %} 
     </div>
     <div class="buttons-wrapper">
         <ul class="primary-nav-ul">
@@ -11,7 +9,6 @@
                     <i class="fas fa-search search-logo"></i>
                 </li>
             </a>
-    {% if config.plugins.breadcrumbs.enabled %}
             <li id="toggle-button" class="navbar-button-li menu-button">
                 <div class="toggle-button hamburger hamburger--spin-r">
                     <div class="hamburger-box">
@@ -19,7 +16,6 @@
                     </div>
                 </div>
             </li>
-    {% endif %} 
         </ul>
     </div>
 </header>
