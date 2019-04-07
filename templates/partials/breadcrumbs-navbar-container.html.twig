@@ -1,11 +1,2 @@
-{% set crumbs = breadcrumbs.get() %}
-{% set breadcrumbs_config = config.plugins.breadcrumbs %}
-{% set divider = breadcrumbs_config.icon_divider_classes %}
-
-{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-<div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    {% include 'partials/breadcrumbs-navbar.html.twig' with {class: 'breadcrumb-ul-dt tablet-noshow'} %}
-    {% include 'partials/breadcrumbs-navbar.html.twig' with {class: 'breadcrumb-ul-mob desktop-noshow'} %}
-</div>
-{% endif %} 
- 
+{% include 'partials/breadcrumbs-navbar.html.twig' with {class: 'breadcrumb-ul-dt tablet-noshow'} %}
+{% include 'partials/breadcrumbs-navbar.html.twig' with {class: 'breadcrumb-ul-mob desktop-noshow'} %}
