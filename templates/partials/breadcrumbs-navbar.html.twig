@@ -6,26 +6,17 @@
     <li>
         <a href="{{ base_url == '' ? '/' : base_url }}">
             <span class="fa-stack fa-2x logo">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fa-graduation-cap fa-stack-1x fa-inverse inverse-logo"></i>
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas {{ breadcrumbs_config.icon_home != '' ? breadcrumbs_config.icon_home : config.theme.top_left_icon }} fa-stack-1x fa-inverse inverse-logo"></i>
             </span>
         </a>
     </li>
-
-{% if config.plugins.breadcrumbs.enabled and (crumbs|length > 1 or breadcrumbs_config.show_all) %}
+{% if breadcrumbs_config.enabled and (crumbs|length > 1 or breadcrumbs_config.show_all) %}
     {% for crumb in crumbs %}
         {% if not loop.last %}
-            {% if crumb.routable %}
-                <li class="mobile-noshow"><a class="hover-cursor-defaulty" href="{{ crumb.url }}" itemprop="url"><span></span><span itemprop="title">{{ crumb.menu }}</span></a></li>
-            {% else  %}
-                <li class="mobile-noshow"><a class="hover-cursor-default" itemprop="url"><span></span><span itemprop="title">{{ crumb.menu }}</span></a></li>
-            {% endif %}
+            <li class="mobile-noshow"><a class="hover-cursor-default" itemprop="url"><span></span><span itemprop="title">{{ crumb.menu }}</span></a></li>
         {% else %}
-            {% if breadcrumbs_config.link_trailing %}
-                <li class="small-mobile-noshow"><a class="hover-cursor-defaulty" href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a></li>
-            {% else %}
-                <li class="small-mobile-noshow"><a class="hover-cursor-default" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a></li>
-            {% endif %}
+            <li class="small-mobile-noshow"><a  class="hover-cursor-default" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a></li>
         {% endif %} 
     {% endfor %}
 {% endif %}
