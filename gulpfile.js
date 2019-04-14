@@ -53,6 +53,7 @@ gulp.task('serve', () => {
   gulp.watch('./templates/**/*.twig').on('change', reload);  
   gulp.watch('../../pages/**/*.md').on('change', reload);
   gulp.watch('../../config/**/*.yaml').on('change', reload);
+  gulp.watch('./js/**/*.js').on('change', reload);
 });
 
 gulp.task('default', ['serve','sass']);

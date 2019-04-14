@@ -194,6 +194,10 @@ template {
   display: block;
 }
 
+.panel-translating {
+  border-right: 1px solid #467a91;
+}
+
 /*!
 * metismenu - v2.7.9
 * A jQuery menu plugin
@@ -1182,7 +1186,7 @@ h1 {
 
 .default-header {
   line-height: 0.8;
-  padding: 0px 25px 25px 25px;
+  padding: 0px 25px 10px 0px;
   border-bottom: 5px solid #444;
 }
 
@@ -1338,6 +1342,7 @@ html {
   overflow-x: hidden;
   line-height: 1.5;
   color: #444;
+  word-break: break-word;
 }
 
 @media only screen and (max-width: 400px) {

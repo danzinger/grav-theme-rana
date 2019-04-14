@@ -22,36 +22,27 @@ slideout
         this.panel.classList.add('panel-open');
         $(".hamburger").toggleClass("is-active");
         $(".header-hamburger").toggleClass("fixed-open");
-        $('.menu-border-container').addClass('border');
+        this.panel.classList.add('panel-translating');
     })
     .on('open', function() {
         this.panel.addEventListener('click', close);
     })
+    .on('translatestart', function() {
+        this.panel.classList.add('panel-translating');
+    })
+    .on('translateend', function() { 
+        this.panel.classList.remove('panel-translating');
+    })
     .on('beforeclose', function() {
-        this.panel.classList.remove('panel-open');
         this.panel.removeEventListener('click', close);
-        $('.menu-border-container').removeClass('border');
         $(".hamburger").removeClass("is-active");
         $(".header-hamburger").removeClass("fixed-open");
+    })
+    .on('close', function() {
+        this.panel.classList.remove('panel-open');
+        this.panel.classList.remove('panel-translating');
     });
-// Uncomment to have the menu opend on page load. You may want to do this depending on the screen size...
+// Uncomment to have the menu opend on page load. For development...
 // $(document).ready(function() {
 //     slideout.toggle();
 // });
-// function checkOpen(eve) {
-//     if (slideout.isOpen()) {
-//         eve.preventDefault();
-//         slideout.close();
-//     }
-// } 
-
-// function addClick() {
-//     document.querySelector('#panel').addEventListener('click', checkOpen);
-// }
-
-// function removeClick() {
-//     document.querySelector('#panel').removeEventListener('click', checkOpen);
-// }
-
-// slideout.on('open', addClick);
-// slideout.on('close', removeClick);

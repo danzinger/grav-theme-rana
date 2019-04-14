@@ -36,3 +36,8 @@
   .slideout-open .slideout-menu {
     display: block;
   }
+
+  .panel-translating{
+    //box-sizing: content-box;
+    border-right: 1px solid $nav-primary;  
+  }
