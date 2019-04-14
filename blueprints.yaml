@@ -1,14 +1,48 @@
 name: Rana
-version: 0.9.0
-description: Desktop first GRAV theme with mobile first mobile support
+version: 0.9.9
+description: A simple app-like mobile first and content-focused Grav theme which is also optimized for large screens.
 icon: rebel
 author:
   name: Matthias Danzinger
   email: matthias.danzinger@gmail.com
 homepage: https://github.com/matthias-danzinger/grav-theme-rana
-demo: http://demo.yoursite.com
-keywords: grav, theme, etc
+demo: http://demo.matthiasdanzinger.eu/rana
+keywords: grav, theme, mobile, app-like
 bugs: https://github.com/matthias-danzinger/grav-theme-rana/issues
 readme: https://github.com/matthias-danzinger/grav-theme-rana/blob/develop/README.md
 license: MIT
+
+form:
+    validation: loose
+
+    fields:
+        title_in_menu:
+            type: text
+            label: Title in menu
+            help: Provide HTML String with inline styles here to easily style the title in the menu
+        top_left_icon:
+            type: text
+            label: Font-Awsome icon in top-left corner
+        placeholder:
+            type: text
+            label: Search-Input placeholder
+        footer_icon:
+            type: text
+            label: Icon in footer
+            label: Font-Awsome icon in footer
+        footer_text:
+            type: text
+            label: Text in footer
+        notice.yellow:
+            type: text
+            label: Yellow markown notice text
+        notice.red:
+            type: text
+            label: Red markown notice text
+        notice.blue:
+            type: text
+            label: Blue markown notice text
+        notice.green:
+            type: text
+            label: Green markown notice text
 

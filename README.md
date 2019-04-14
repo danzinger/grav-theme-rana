@@ -1,13 +1,13 @@
 
 # Rana Theme
 
-The **Rana** Theme is a simple app-like mobile first and content-focused Grav Theme for [Grav CMS](http://github.com/getgrav/grav). To see the full capabilities of this theme, it is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) as well as [TNT-Search plugin](https://github.com/trilbymedia/grav-plugin-tntsearch). 
+The **Rana** Theme is a simple app-like mobile first and content-focused Grav theme for [Grav CMS](http://github.com/getgrav/grav). To see the full capabilities of this theme, it is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) as well as [TNT-Search plugin](https://github.com/trilbymedia/grav-plugin-tntsearch). 
 
 ![Rana](assets/readme-screenshot.jpg)
 
 ## Description
 
-A simple app-like mobile first and content-focused Grav Theme which is also optimized for large screens.
+A simple app-like mobile first and content-focused Grav theme which is also optimized for large screens.
 
 # Installation
 

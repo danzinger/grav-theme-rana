@@ -7,7 +7,7 @@
         <a href="{{ base_url == '' ? '/' : base_url }}">
             <span class="fa-stack fa-2x logo">
                 <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas {{ breadcrumbs_config.icon_home != '' ? breadcrumbs_config.icon_home : config.theme.top_left_icon }} fa-stack-1x fa-inverse inverse-logo"></i>
+                <i class="{{ breadcrumbs_config.icon_home != '' ? breadcrumbs_config.icon_home : config.theme.top_left_icon }} fa-stack-1x fa-inverse inverse-logo"></i>
             </span>
         </a>
     </li>
