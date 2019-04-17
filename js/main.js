@@ -1,9 +1,11 @@
 //initialize metismenu
-$("#metismenu").metisMenu();
+$("#metismenu").metisMenu({
+    //toggle: false
+  });
 
 var slideout = new Slideout({
     'panel': document.getElementById('panel'),
-    'menu': document.getElementById('menu'),
+    'menu': document.getElementById('menu'), 
     'padding': 300,
     'tolerance': 70,
     'side': 'right'

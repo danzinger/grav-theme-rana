@@ -1,5 +1,5 @@
 name: Rana
-version: 0.9.9
+version: 1.0.0
 description: A simple app-like mobile first and content-focused Grav theme which is also optimized for large screens.
 icon: rebel
 author:
@@ -9,12 +9,11 @@ homepage: https://github.com/matthias-danzinger/grav-theme-rana
 demo: http://demo.matthiasdanzinger.eu/rana
 keywords: grav, theme, mobile, app-like
 bugs: https://github.com/matthias-danzinger/grav-theme-rana/issues
-readme: https://github.com/matthias-danzinger/grav-theme-rana/blob/develop/README.md
+readme: https://github.com/matthias-danzinger/grav-theme-rana/blob/master/README.md
 license: MIT
 
 form:
     validation: loose
-
     fields:
         title_in_menu:
             type: text
@@ -22,7 +21,7 @@ form:
             help: Provide HTML String with inline styles here to easily style the title in the menu
         top_left_icon:
             type: text
-            label: Font-Awsome icon in top-left corner
+            label: '[Font-Awsome](https://fontawesome.com/) icon in top-left corner'
         placeholder:
             type: text
             label: Search-Input placeholder
@@ -45,4 +44,13 @@ form:
         notice.green:
             type: text
             label: Green markown notice text
+        parents_routable:
+            type: toggle
+            label: Parent pages routable in menu and breadcrumbs. Careful, read info!
+            help: If you have pages with subpages (parents) and you want these parents to be routable from the menu and from the breadcrumbs, use this option. Be careful! The menu closes each time you click a parent. If a user wants to navigate three levels down, the menu has to be opened three times. Avoid using this option!
+            default: 0
+            highlight: 1
+            options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
 
