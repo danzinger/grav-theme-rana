@@ -38,20 +38,20 @@ $hamburger-hover-opacity       : 1 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
-//@import 'includes/vendor/normalize.min'; 
-@import 'includes/vendor/pure'; 
-@import 'includes/mixins'; 
-@import 'includes/vendor/slideout';  
-@import 'includes/vendor/metismenu'; 
-@import 'includes/vendor/hamburgers/hamburgers'; 
-@import 'includes/search';
-@import 'includes/navbar';
-@import 'includes/breadcrumbs'; 
-@import 'includes/default'; 
-@import 'includes/toc';
-@import 'includes/sidebar';
-@import 'includes/sticky-footer';
-@import 'includes/typography';
+//@import 'partials/vendor/normalize.min'; 
+@import 'partials/vendor/pure'; 
+@import 'partials/mixins'; 
+@import 'partials/vendor/slideout';  
+@import 'partials/vendor/metismenu'; 
+@import 'partials/vendor/hamburgers/hamburgers'; 
+@import 'partials/search';
+@import 'partials/navbar';
+@import 'partials/breadcrumbs'; 
+@import 'partials/default'; 
+@import 'partials/toc-page';
+@import 'partials/sidebar';
+@import 'partials/sticky-footer';
+@import 'partials/typography';
 
 html { 
     font-family: 'Rubik', sans-serif; 
