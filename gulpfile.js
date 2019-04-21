@@ -16,7 +16,7 @@ var src_dir = './scss/**/*.scss';
 var dest_dir = './css-compiled';
 
 var paths = {
-    source: src_dir
+    source: src_dir 
 };
 
 gulp.task('sass', function() {

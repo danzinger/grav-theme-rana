@@ -6,7 +6,7 @@ $("#metismenu").metisMenu({
 var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'), 
-    'padding': 300,
+    'padding': 310,
     'tolerance': 70,
     'side': 'right'
 });

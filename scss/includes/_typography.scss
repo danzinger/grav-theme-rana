@@ -10,8 +10,8 @@ h1{
     position: relative; 
 }
 .default-header{
-    line-height: 0.8; 
-    padding:0px 25px 10px 0px;
+    line-height: 0.9; 
+    padding:0px 25px 2% 0px;
     border-bottom: 5px solid $font-color ;
 }
 h2{
@@ -41,7 +41,7 @@ h6{
 }
  
 p,li,ul{
-    @include fluid-type($min_width, $max_width, 16px, 25px);
+    @include fluid-type($min_width, $max_width, 16px, 25px); 
 }
 
 a{

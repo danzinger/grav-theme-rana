@@ -1,4 +1,4 @@
-$font-color: #444;  
+$font-color: #444;
 $nav-primary: #467a91;
 $menu-buttons-color: #ccc;
 $link-color:$nav-primary;
@@ -12,13 +12,13 @@ $primary-lighten-45: lighten($nav-primary, 45%);
  
 $primary-bg-color: $primary-lighten-45; // for (slideout) menu and panel!!!
  
-$navbar-height-dt: 130px; 
+$navbar-height-dt: 130px;
 $navbar-height-mob: 65px;
 $logo-width: 0px;
 $z-index-above-all-content: 999;
 $breakpoint-xs-sm: 400px;
 $breakpoint-sm-md: 700px;
-$breakpoint-lg-xl: 1170px;  
+$breakpoint-lg-xl: 1170px;
 
 $notice-warning: "Warning" !default;
 $notice-info: "Info" !default;
@@ -38,27 +38,26 @@ $hamburger-hover-opacity       : 1 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
-@import 'includes/vendor/normalize.min';
+//@import 'includes/vendor/normalize.min'; 
+@import 'includes/vendor/pure'; 
 @import 'includes/mixins'; 
-@import 'includes/vendor/slideout'; 
+@import 'includes/vendor/slideout';  
 @import 'includes/vendor/metismenu'; 
-@import 'includes/vendor/hamburgers/hamburgers';
-@import 'includes/markdown-notices';
+@import 'includes/vendor/hamburgers/hamburgers'; 
 @import 'includes/search';
 @import 'includes/navbar';
 @import 'includes/breadcrumbs'; 
 @import 'includes/default'; 
 @import 'includes/toc';
 @import 'includes/sidebar';
-@import 'includes/sticky-footer'; 
-@import 'includes/typography';  
+@import 'includes/sticky-footer';
+@import 'includes/typography';
 
 html { 
     font-family: 'Rubik', sans-serif; 
     overflow-x: hidden;
-    line-height: 1.5;
+    line-height: 1.3;
     color: $font-color;
-    word-break: break-word;
 } 
 
 .small-mobile-noshow {
@@ -94,5 +93,5 @@ html {
 .noshow-above-700{
     @media only screen and (min-width: 700px) {
         display: none!important;
-    }
+    }  
 }

@@ -32,7 +32,35 @@
 
 .content {
     margin: 0 auto;
-    padding: 0 1em; 
-    max-width: 1050px;
+    padding: 0 1em;
+    max-width: 1200px;
+    img, div{ 
+        max-width: 100%; 
+    }
+    word-wrap: break-word;
 }
 
+// Webkit scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #467a91;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darken(#467a91, 10%);
+}

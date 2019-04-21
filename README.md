@@ -1,13 +1,37 @@
-
 # Rana Theme
 
-The **Rana** Theme is a simple app-like mobile first and content-focused Grav theme for [Grav CMS](http://github.com/getgrav/grav). To see the full capabilities of this theme, it is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) as well as [TNT-Search plugin](https://github.com/trilbymedia/grav-plugin-tntsearch). 
+The **Rana** Theme is a simple app-like mobile first and content-focused Grav theme for [Grav CMS](http://github.com/getgrav/grav). To see the full capabilities of this theme, it is highly recommended to use the [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) as well as [TNT-search plugin](https://github.com/trilbymedia/grav-plugin-tntsearch). 
 
 ![Rana](assets/readme-screenshot.jpg)
 
 ## Description
 
 A simple app-like mobile first and content-focused Grav theme which is also optimized for large screens.
+
+## Features
+
+* Applike touch enabled slideout navigation menu using [slideout.js](https://github.com/Mango/slideout)
+* A structured menu for many subpages optimized for mobile using [metismenu](https://github.com/onokumus/metismenu)
+* Provides templated and native support for [breadcrumbs plugin](https://github.com/getgrav/grav-plugin-breadcrumbs) and [TNT-search plugin](https://github.com/trilbymedia/
+* Includes [pure css](https://github.com/pure-css/pure)
+
+## Settings
+
+The theme provides several options. If you are using the admin panel, you can easily modify these settings under Themes > Rana. If you are not using admin, you probably know where to modify these settings directly.
+
+##### Basic Settings
+
+* **Title in Menu.** To keep it very simple, you can provide a HTML-string with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. If you do not worry about styling, just enter a short title. 
+* **Hamburger animation.** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
+
+##### Markdown Notices Settings
+
+* **Markdown notice Settings.** If you use the [Markdown-notices plugin](https://github.com/getgrav/grav-plugin-markdown-notices) **without** the build-in-css (disable built-in-css in plugin options), the Rana theme will automatically use its own styles for the notices. These include a small text. You can specify here, which text appears above the respective notice.
+
+##### Responsive settings
+* **Desktop Mode.** If enabled, the off-canvas-menu is always open if screen is wider than the `Desktop min width` value, which can be set below. 
+* **Desktop min width (pixels).** Applies only in desktop mode. If the screen width is wider than the given amount of pixels, the off-canvas menu is always open.
+* **Parent pages routable in menu.** If you have pages with subpages and you want these parent-pages to be accessible from the menu because you like to place content there, you can use this option. The page will only be opened, if it existis and if you do not set `routable: false` in the frontmatter of the page. Otherwise, the subpages are only expanded in the menu. **Please note: ** If you do not use Desktop Mode or - when in Desktop Mode - the screen-width is smaller then the amount set above, the menu closes each time you click a routable parent.
 
 # Installation
 
