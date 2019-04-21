@@ -40,9 +40,6 @@ $notice-note: "Note" !default;
     background: rgba(239, 171, 76, 0.2);
     p {
         border-top: 30px solid rgba(239, 171, 76, 0.8);
-        &::after {
-            content: "Info"
-        }
     }
 }
 
@@ -50,9 +47,6 @@ $notice-note: "Note" !default;
     background: rgba(217, 83, 79, 0.2);
     p {
         border-top: 30px solid rgba(217, 83, 79, 0.8);
-        &::after {
-            content: $notice-warning;
-        }
     }
 }
 
@@ -60,9 +54,6 @@ $notice-note: "Note" !default;
     background: rgba(106, 176, 222, 0.2);
     p {
         border-top: 30px solid rgba(106, 176, 222, 0.8);
-        &::after {
-            content: $notice-note;
-        }
     }
 }
 
@@ -70,8 +61,5 @@ $notice-note: "Note" !default;
     background: rgba(92, 184, 92, 0.2);
     p {
         border-top: 30px solid rgba(92, 184, 92, 0.8);
-        &::after {
-            content: $notice-tip;
-        }
     }
 }

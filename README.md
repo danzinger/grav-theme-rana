@@ -22,7 +22,6 @@ The theme provides several options. If you are using the admin panel, you can ea
 ##### Basic Settings
 
 * **Title in Menu.** To keep it very simple, you can provide a HTML-string with inline styles here. This turned out to be the easiest solution to have a nice styling for different names. If you do not worry about styling, just enter a short title. 
-* **Hamburger animation.** You may use any other animation style. See [here](https://jonsuh.com/hamburgers) for reference.
 
 ##### Markdown Notices Settings
 
