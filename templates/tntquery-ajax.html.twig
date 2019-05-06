@@ -1,5 +1,5 @@
 <div class="row">
-    <p style="margin:0;" class="info">
+    <p class="info">
         {% if config.get('plugins.tntsearch.display_hits') %}
             <span class="hits">Found {{ tntsearch_results.number_of_hits }} results</span>
         {% endif %}
@@ -8,15 +8,15 @@
         {% endif %}
     </p>
     {% for key, val in tntsearch_results.hits  %}
-        <div class="search-results">
+        <div class="search-result">
             <a href="{{ base_url ~ val.link }}">
                 <h5 class="title">
-                    <span class="link">{{ val.title }}</span>
+                    <span class="link">{{ val.title|raw }}</span>
                 </h5>
                 {% if config.get('plugins.tntsearch.display_route') %}
-                    <h6 class="route">{{ val.link }}</h6>
+                    <h6 class="route">{{ val.link|raw }}</h6>
                 {% endif %}
-                <p style="margin:0;">{{ val.content }}</p>
+                <p>{{ val.content|raw }}</p>
             </a> 
         </div>
     {% endfor %}

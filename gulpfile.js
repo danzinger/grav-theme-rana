@@ -34,7 +34,7 @@ gulp.task('sass', function() {
       }))
     // write unminified main.css
     .pipe(gulp.dest(dest_dir))
-    .pipe(cleancss())
+    .pipe(cleancss({rebase: false}))
     .pipe(rename({
       suffix: '.min'
     }))

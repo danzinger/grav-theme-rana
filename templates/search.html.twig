@@ -6,5 +6,11 @@
             <div  class="main-content-header-bg-text">Search</div>
         </div>
     </div>
-    {% include 'partials/tntsearch.html.twig' with { in_page: true }%}
-{% endblock %}
+    <div class="main menu-border-container"> 
+        <div class="content">
+            {% set placeholder = placeholder|default(config.get('theme.placeholder', 'Search...')) %}
+        
+            {% include 'partials/tntsearch.html.twig' with { in_page: true }%}
+        </div>
+    </div>
+{% endblock %} 

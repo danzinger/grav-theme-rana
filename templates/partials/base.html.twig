@@ -17,8 +17,9 @@
     <link href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" rel="stylesheet">
     {% block stylesheets %}
         {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
-        {% if not config.plugins['markdown-notices'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/markdown-notices.min.css', 98) %}{% endif %} 
-        {% do assets.addCss('theme://css/custom.css', 97) %}
+        {% if not config.plugins['markdown-notices'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/markdown-notices.min.css', 90) %}{% endif %} 
+        {% if not config.plugins['tntsearch'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/tntsearch.min.css', 80) %}{% endif %}
+        {% do assets.addCss('theme://css/custom.css', 70) %}
     {% endblock %} 
     {{ assets.css() }}
     {% include 'partials/settings.css.html.twig' %}
