@@ -1,0 +1,64 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#d3e3ea">
+    {% include 'partials/metadata.html.twig' %}
+ 
+    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" rel="stylesheet">
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/main.min.css', 99) %}
+        {% if not config.plugins['markdown-notices'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/markdown-notices.min.css', 90) %}{% endif %} 
+        {% if not config.plugins['tntsearch'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/tntsearch.min.css', 80) %}{% endif %}
+        {% do assets.addCss('theme://css/custom.css', 70) %}
+    {% endblock %} 
+    {{ assets.css() }}
+    {% include 'partials/settings.css.html.twig' %}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery', 100) %}
+        {% do assets.addJs('theme://js/vendor/slideoutjs/slideout.min.js', {group: 'bottom'}) %}
+        {% do assets.addJs('theme://js/vendor/metismenu/metismenu.min.js', {group: 'bottom'}) %}
+        {% do assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
+    {% endblock %}
+    {{ assets.js() }}
+
+{% endblock head %}
+</head>
+<body>
+ 
+{% block menu %} 
+     <div class="main-nav" id="menu"> 
+        {% include 'partials/navigation.html.twig' %}
+     </div> 
+{% endblock %}
+
+{% block panel %}
+    <div class="panel site" id="panel">
+        {% block navbartop %}
+            {% include 'partials/navbartop.html.twig' %}
+        {% endblock %}
+        <div class="site-content">
+            {% block content %}{% endblock %} 
+        </div>
+        {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %} 
+    </div>
+{% endblock %} 
+
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+$font-color: #444;
+$nav-primary: #467a91;
+$menu-buttons-color: #ccc;
+$link-color:$nav-primary;
+$link-hover-color:lighten($link-color, 15%);
+$primary-lighten-7: lighten($nav-primary, 7%);
+$primary-lighten-20: lighten($nav-primary, 20%);
+$primary-lighten-30: lighten($nav-primary, 30%);
+$primary-lighten-37: lighten($nav-primary, 37%);
+$primary-lighten-40: lighten($nav-primary, 40%);
+$primary-lighten-45: lighten($nav-primary, 45%);
+ 
+$primary-bg-color: $primary-lighten-45; // for (slideout) menu and panel!!!
+ 
+$navbar-height-dt: 130px; 
+$navbar-height-mob: 65px;
+$logo-width: 0px;
+$z-index-above-all-content: 999; 
+$breakpoint-xs-sm: 400px;
+$breakpoint-sm-md: 700px;
+$breakpoint-lg-xl: 1170px;
+
+$notice-warning: "Warning" !default;
+$notice-info: "Info" !default;
+$notice-tip: "Tip" !default;
+$notice-note: "Note" !default;  
+
+// Hamburger Settings
+// ==================================================
+$hamburger-padding-x           : 0px !default;
+$hamburger-padding-y           : 0px !default;
+$hamburger-layer-width         : 32px !default;  
+$hamburger-layer-height        : 5px !default;
+$hamburger-layer-spacing       : 5px !default;
+$hamburger-layer-color         : $menu-buttons-color;
+$hamburger-layer-border-radius : 4px !default;
+$hamburger-hover-opacity       : 1 !default;
+$hamburger-active-layer-color  : $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+//@import 'partials/vendor/normalize.min'; 
+@import 'partials/vendor/pure'; 
+@import 'partials/mixins'; 
+@import 'partials/vendor/slideout';  
+@import 'partials/vendor/metismenu'; 
+@import 'partials/vendor/hamburgers/hamburgers'; 
+@import 'partials/navbar';
+@import 'partials/breadcrumbs'; 
+@import 'partials/default'; 
+@import 'partials/toc-page';
+@import 'partials/sidebar'; 
+@import 'partials/sticky-footer';
+@import 'partials/typography';  
+   
+html {  
+    font-family: 'Rubik', sans-serif; 
+    overflow-x: hidden;
+    line-height: 1.3;
+    color: $font-color;
+} 
+
+.small-mobile-noshow {
+    @media only screen and (max-width: $breakpoint-xs-sm) {
+        display: none!important;
+    } 
+}
+
+.mobile-noshow {
+    @media only screen and (max-width: $breakpoint-sm-md) {
+        display: none!important;
+    }
+}
+
+.mobile-hidden {
+    @media only screen and (max-width: $breakpoint-sm-md) {
+        visibility: hidden!important;
+    }
+}
+
+.tablet-noshow {
+    @media only screen and (max-width: $breakpoint-lg-xl) {
+        display: none!important;
+    }
+}
+
+.desktop-noshow {
+    @media only screen and (min-width: $breakpoint-lg-xl) {
+        display: none!important;
+    }
+}
+
+.noshow-above-700{
+    @media only screen and (min-width: 700px) {
+        display: none!important;
+    }  
+}

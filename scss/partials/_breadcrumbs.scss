@@ -1,0 +1,228 @@
+$blue-gray: $primary-lighten-7;
+$blue-gray-darken: $nav-primary;
+$blue: $primary-lighten-7;
+$blue-darken: $nav-primary;
+$green: lighten($nav-primary, 10%);
+$green-darken: lighten($nav-primary, 5%);
+$height: $navbar-height-dt;
+$font-size: 0.15*$height;
+
+.inverse-logo{
+    color: $blue-gray; //firefox
+}
+
+.hover-cursor-default{
+    &:hover{
+        cursor: default!important;
+    }    
+    &:-webkit-any-link {
+        cursor: default!important;
+    }
+}
+
+.breadcrumb-ul-dt {
+    .logo{
+        font-size: 270%;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    li {
+        float: left; 
+        display: flex;
+        a {
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            background: $blue;
+            text-decoration: none;
+            position: relative;
+            height: $height; 
+            padding: 0 5px 0px 5px;
+            margin-right: (0.357)*$height;
+            font-size: $font-size;
+            
+        }
+        &:nth-child(even) {
+            a { 
+                background-color: $blue-darken;
+                &:before {
+                    border-color: $blue-darken;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $blue-darken;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                padding-left: $height*(0.2);
+                border-radius: 0px 0 0 0px;
+                &:before {
+                    border: none;
+                }
+            }
+        }
+        &:last-child {
+            // a {
+            //     padding-right: $height*(0.375);
+            //     border-radius: 0 0px 0px 0;
+            //     &:after {
+            //         border: none;
+            //     }
+            // }
+        }
+        a {
+            &:before,
+            &:after {
+                transition: all 0.2s ease-in-out;
+                content: "";
+                position: absolute;
+                top: 0;
+                border: 0 solid $blue;
+                border-width: $height/2 $height/6+1;
+                width: 0;
+                height: 0;
+            }
+            &:before {
+                left: (-1)*($height/3);
+                border-left-color: transparent;
+            }
+            &:after {
+                left: 100%;
+                border-color: transparent;
+                border-left-color: $blue;
+            }
+            &:hover {
+                background-color: $green;
+                &:before {
+                    border-color: $green;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $green;
+                }
+            }
+            &:active {
+                background-color: $green-darken;
+                &:before {
+                    border-color: $green-darken;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $green-darken;
+                }
+            }
+        }
+    }
+}
+
+$height: $navbar-height-mob;
+$font-size: 0.20*$height;
+.breadcrumb-ul-mob {
+    .logo{
+        font-size: 190%;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    li {
+        display: flex;
+        a {
+            transition: all 0.2s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            background: $blue;
+            text-decoration: none;
+            position: relative;
+            height: $height; 
+            padding: 0 5px 0px 5px;
+            margin-right: (0.357)*$height;
+            font-size: $font-size;
+        }
+        &:nth-child(even) {
+            a { 
+                background-color: $blue-darken;
+                &:before {
+                    border-color: $blue-darken;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $blue-darken;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                padding-left: $height*(0.2);
+                border-radius: 0px 0 0 0px;
+                &:before {
+                    border: none;
+                }
+            }
+        }
+        &:last-child {
+            // a {
+            //     padding-right: $height*(0.375);
+            //     border-radius: 0 0px 0px 0;
+            //     &:after {
+            //         border: none;
+            //     }
+            // }
+        }
+        a {
+            &:before,
+            &:after {
+                transition: all 0.2s ease-in-out;
+                content: "";
+                position: absolute;
+                top: 0;
+                border: 0 solid $blue;
+                border-width: $height/2 $height/6+1;
+                width: 0;
+                height: 0;
+            }
+            &:before {
+                left: (-1)*($height/3);
+                border-left-color: transparent;
+            }
+            &:after {
+                left: 100%;
+                border-color: transparent;
+                border-left-color: $blue;
+            }
+            &:hover {
+                background-color: $green;
+                &:before {
+                    border-color: $green;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $green;
+                }
+            }
+            &:active {
+                background-color: $green-darken;
+                &:before {
+                    border-color: $green-darken;
+                    border-left-color: transparent;
+                }
+                &:after {
+                    border-left-color: $green-darken;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="content-header">
+        <div class="main-content-header-bg">
+            <div  class="main-content-header-bg-text">Search</div>
+        </div>
+    </div>
+    <div class="main menu-border-container"> 
+        <div class="content">
+            {% set placeholder = placeholder|default(config.get('theme.placeholder', 'Search...')) %}
+        
+            {% include 'partials/tntsearch.html.twig' with { in_page: true }%}
+        </div>
+    </div>
+{% endblock %} 

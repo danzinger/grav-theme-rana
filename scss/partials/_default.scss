@@ -1,0 +1,66 @@
+.content-header {
+    position: absolute;
+    z-index: -1;
+    .main-content-header-bg {
+        position: absolute;
+        top: 0;
+        max-width: 100vw;
+        overflow: hidden;
+        font-weight: 700;
+        background-image: linear-gradient($primary-lighten-37, $primary-lighten-45);
+        height: 300px;
+        @media only screen and (max-width: $breakpoint-sm-md) {
+            height: 170px;
+        }
+        @media only screen and (max-width: $breakpoint-xs-sm) {
+            height: 120px;
+        }
+        .main-content-header-bg-text {
+            line-height: 0.8;
+            min-width: 100vw;
+            color: $primary-lighten-45;
+            font-size: 61.54vh;
+            @media only screen and (max-width: $breakpoint-sm-md) {
+                font-size: 292.31px;
+            }
+            @media only screen and (max-width: $breakpoint-xs-sm) {
+                font-size: 238.46px;
+            }
+        }
+    }
+}
+
+.content {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 1200px;
+    img, div{ 
+        max-width: 100%; 
+    }
+    word-wrap: break-word;
+}
+
+// Webkit scrollbar
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #467a91;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darken(#467a91, 10%);
+}

@@ -1,0 +1,25 @@
+.toc-page {
+    >ol{
+        padding-left: 0!important;
+    }
+    ol {
+        @media only screen and (max-width: $breakpoint-sm-md) {        
+            padding-left: 15px;
+        }
+        counter-reset: item;
+        font-weight: 600;
+        ol {
+            font-weight: 300;
+            ol {
+                font-size: 90%;
+            }
+        }
+    }
+    li {
+        display: block 
+    }
+    li:before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+    } 
+}

@@ -1,0 +1,55 @@
+
+$min_width: 320px;  
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 50px;
+
+h1{
+    @include fluid-type($min_width, $max_width, 35px, 90px);
+    margin:35px 0px 10px 0px;
+    position: relative; 
+}
+.default-header{
+    line-height: 0.9; 
+    padding:0px 25px 2% 0px;
+    border-bottom: 5px solid $font-color ;
+}
+h2{
+    @include fluid-type($min_width, $max_width, 20px, 50px);
+    margin:30px 0px 10px 0px;
+    position: relative;
+}
+h3{
+    @include fluid-type($min_width, $max_width, 19px, 45px);
+    margin:25px 0px 10px 0px;
+    position: relative;
+}
+h4{
+    @include fluid-type($min_width, $max_width, 18px, 40px);
+    margin:20px 0px 10px 0px;
+    position: relative;
+}
+h5{
+    @include fluid-type($min_width, $max_width, 17px, 35px);
+    margin:15px 0px 10px 0px;
+    position: relative;
+} 
+h6{
+    @include fluid-type($min_width, $max_width, 16px, 30px);
+    margin:10px 0px 8px 0px;
+    position: relative;
+}
+ 
+p,li,ul{
+    @include fluid-type($min_width, $max_width, 16px, 25px); 
+}
+
+a{
+    @include fluid-type($min_width, $max_width, 16px, 25px);
+    text-decoration: none;
+    color: $link-color;
+    transition: all 0.1s ease-in;
+    &:hover{
+        color: $link-hover-color;
+    }
+}

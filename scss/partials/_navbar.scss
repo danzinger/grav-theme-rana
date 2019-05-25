@@ -1,0 +1,72 @@
+.header {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: $primary-lighten-20;
+    height: $navbar-height-dt;
+    @media only screen and (max-width: $breakpoint-lg-xl) {
+        height: $navbar-height-mob;
+    }
+    z-index: 2;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.buttons-wrapper {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.primary-nav-ul {
+    display: flex;
+    height: 100%;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    .navbar-item-li {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        text-transform: uppercase;
+    }
+    .navbar-button-li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $primary-lighten-7;
+        width: $navbar-height-dt;
+        @media only screen and (max-width: $breakpoint-lg-xl) {
+            width: $navbar-height-mob;
+        }
+        height: 100%;
+        margin-right: 0px;
+        margin-right: 0px;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+    .menu-button {
+        background: $nav-primary;
+    }
+    // .hamburger-inner,
+    // .hamburger-inner::after,
+    // .hamburger-inner::before {
+    //     background-color: #ccc;
+    // }
+}
+
+.search-logo { 
+    color: $menu-buttons-color;
+    font-size: 28px; 
+    margin-bottom: 5px; 
+}
