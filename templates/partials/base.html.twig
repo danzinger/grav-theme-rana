@@ -21,7 +21,7 @@
         {% if not config.plugins['tntsearch'].built_in_css %}{% do assets.addCss('theme://css-compiled/plugins/tntsearch.min.css', 80) %}{% endif %}
         {% do assets.addCss('theme://css/custom.css', 70) %}
     {% endblock %} 
-    {{ assets.css() }}
+    {{ assets.css()|raw }}
     {% include 'partials/settings.css.html.twig' %}
 
     {% block javascripts %}
@@ -30,7 +30,7 @@
         {% do assets.addJs('theme://js/vendor/metismenu/metismenu.min.js', {group: 'bottom'}) %}
         {% do assets.addJs('theme://js/main.js', {group: 'bottom'}) %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 
 {% endblock head %}
 </head>
@@ -57,7 +57,7 @@
 {% endblock %} 
 
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>
