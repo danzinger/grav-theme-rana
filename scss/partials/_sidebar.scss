@@ -1,3 +1,5 @@
+@use './variables' as *;
+@use './mixins' as *;
 $menu-bg-color: $primary-bg-color;
 
 $menu-font-color: #333;

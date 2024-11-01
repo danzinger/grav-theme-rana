@@ -1,5 +1,6 @@
 // Hamburger
 // ==================================================
+@use '../../variables' as *;
 .hamburger {
   padding: $hamburger-padding-y $hamburger-padding-x;
   display: inline-block;

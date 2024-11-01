@@ -6,16 +6,27 @@
   "description": "Package for GRAV Theme development",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.7.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^3.9.4",
     "gulp-csscomb": "^3.0.8",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "latest"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.80.5"
+  },
+  "browserslist": [
+    "last 4 Chrome versions",
+    "Edge >= 12",
+    "Firefox ESR",
+    "last 4 Safari versions",
+    "last 4 Opera versions",
+    "Explorer >= 10"
+  ],
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp build"
   },
   "dependencies": {
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-wait": "0.0.2"
+    "gulp-sourcemaps": "^2.6.4"
   }
 }
