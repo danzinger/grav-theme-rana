@@ -1,19 +1,5 @@
- 
-//@import 'partials/vendor/normalize.min'; 
-//@import 'partials/vendor/pure'; 
-//@import 'partials/variables'; 
-//@import 'partials/mixins'; 
-//@import 'partials/vendor/slideout';  
-//@import 'partials/vendor/metismenu'; 
-//@import 'partials/vendor/hamburgers/hamburgers'; 
-//@import 'partials/navbar';
-//@import 'partials/breadcrumbs'; 
-//@import 'partials/default'; 
-//@import 'partials/toc-page';
-//@import 'partials/sidebar'; 
-//@import 'partials/sticky-footer';
-//@import 'partials/typography';  
 @use 'partials' as *;
+
 
 html {  
     font-family: 'Rubik', sans-serif; 

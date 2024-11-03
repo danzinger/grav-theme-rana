@@ -12,7 +12,9 @@
     "gulp-csscomb": "^3.0.8",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.80.5"
+    "sass": "^1.80.5",
+    "gulp-sourcemaps": "^3.0.0",
+    "browser-sync": "^2.26.14"
   },
   "browserslist": [
     "last 4 Chrome versions",
@@ -25,8 +27,5 @@
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp build"
-  },
-  "dependencies": {
-    "gulp-sourcemaps": "^2.6.4"
   }
 }

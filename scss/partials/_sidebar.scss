@@ -1,57 +1,76 @@
 @use './variables' as *;
 @use './mixins' as *;
-$menu-bg-color: $primary-bg-color;
 
+$menu-bg-color: $primary-bg-color;
 $menu-font-color: #333;
 $menu-hover-font-color: #000;
-$menu-item-hover-color: rgba(0,0,0,0.03);
+$menu-item-hover-color: rgba(0, 0, 0, 0.03);
 
 .sidebar-nav {
-    a,li,ul{
-        font-size: 17px!important;
-        z-index: 4; 
-        @include fluid-type(320px, 1200px, 16px, 18px); 
+    a, li, ul {
+        font-size: 17px !important;
+        z-index: 4;
+        @include fluid-type(320px, 1200px, 16px, 18px);
     }
+
     ul {
-        padding: 0; 
-        margin: 0; 
-        list-style: none; 
+        padding: 0;
+        margin: 0;
+        list-style: none;
     }
+
     .metismenu {
-        display: flex; 
+        display: flex;
         flex-direction: column;
+
         li {
             display: flex;
             flex-direction: column;
             position: relative;
         }
+
         a {
             position: relative;
             display: block;
-            border-left: 3px solid transparent; 
-            padding: 20px 20px;
-            color: $menu-font-color; 
+            border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: transparent;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: $menu-font-color;
             outline-width: 0;
-            transition: all .1s ease-in;
+            transition: all 0.1s ease-in;
             -webkit-tap-highlight-color: transparent;
         }
-        ul>li {
-            padding-left: 1px; 
-            border-left: 3px solid $primary-lighten-20;
-            background: rgba(0, 0, 0, 0.03);
+
+        ul > li {
+            padding-left: 1px;
+            border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: $primary-lighten-20;
+            background-color: rgba(0, 0, 0, 0.03);
         }
-        ul ul{
-           background: rgba(0, 0, 0, 0.03);
+
+        ul ul {
+            background-color: rgba(0, 0, 0, 0.03);
         }
-        a:hover{
-            border-left: 3px solid $primary-lighten-20; 
+
+        a:hover {
+            border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: $primary-lighten-20;
             color: $menu-hover-font-color;
             text-decoration: none;
-            background: $menu-item-hover-color;
+            background-color: $menu-item-hover-color;
         }
+
         a[aria-expanded="true"] {
-            background-color:  rgba(0,0,0,0.1);
-            border-left: 3px solid $primary-lighten-20; 
+            background-color: rgba(0, 0, 0, 0.1);
+            border-left-width: 3px;
+            border-left-style: solid;
+            border-left-color: $primary-lighten-20;
         }
     }
 }
@@ -65,14 +84,16 @@ $menu-item-hover-color: rgba(0,0,0,0.03);
     align-content: center;
     align-items: center;
     width: 100%;
+
     @media only screen and (max-width: $breakpoint-lg-xl) {
         height: $navbar-height-mob;
-    }    
+    }
+
     h3 {
         font-weight: 70px;
     }
-    span{
-        font-size:30px;
-    }
 
+    span {
+        font-size: 30px;
+    }
 }

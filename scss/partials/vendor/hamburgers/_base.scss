@@ -1,10 +1,10 @@
 // Hamburger
 // ==================================================
 @use "sass:math";
+@use '../../variables' as vars;
 
-@use '../../variables' as *;
 .hamburger {
-  padding: $hamburger-padding-y $hamburger-padding-x;
+  padding: vars.$hamburger-padding-y vars.$hamburger-padding-x;
   display: inline-block;
   cursor: pointer;
 
@@ -22,35 +22,35 @@
   overflow: visible;
 
   &:hover {
-    @if $hamburger-hover-use-filter == true {
-      filter: $hamburger-hover-filter;
+    @if vars.$hamburger-hover-use-filter == true {
+      filter: vars.$hamburger-hover-filter;
     }
     @else {
-      opacity: $hamburger-hover-opacity;
+      opacity: vars.$hamburger-hover-opacity;
     }
   }
 
   &.is-active {
     &:hover {
-      @if $hamburger-hover-use-filter == true {
-        filter: $hamburger-active-hover-filter;
+      @if vars.$hamburger-hover-use-filter == true {
+        filter: vars.$hamburger-active-hover-filter;
       }
       @else {
-        opacity: $hamburger-active-hover-opacity;
+        opacity: vars.$hamburger-active-hover-opacity;
       }
     }
 
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after {
-      background-color: $hamburger-active-layer-color;
+      background-color: vars.$hamburger-active-layer-color;
     }
   }
 }
 
 .hamburger-box {
-  width: $hamburger-layer-width;
-  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  width: vars.$hamburger-layer-width;
+  height: math.div(vars.$hamburger-layer-height * 3 + vars.$hamburger-layer-spacing * 2, 1); // Ensure proper division handling
   display: inline-block;
   position: relative;
 }
@@ -58,15 +58,15 @@
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: math.div($hamburger-layer-height, -2);
+  margin-top: math.div(vars.$hamburger-layer-height, -2);
 
   &,
   &::before,
   &::after {
-    width: $hamburger-layer-width;
-    height: $hamburger-layer-height;
-    background-color: $hamburger-layer-color;
-    border-radius: $hamburger-layer-border-radius;
+    width: vars.$hamburger-layer-width;
+    height: vars.$hamburger-layer-height;
+    background-color: vars.$hamburger-layer-color;
+    border-radius: vars.$hamburger-layer-border-radius;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -80,10 +80,10 @@
   }
 
   &::before {
-    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    top: math.div((vars.$hamburger-layer-spacing + vars.$hamburger-layer-height) * -1, 1);
   }
 
   &::after {
-    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+    bottom: math.div((vars.$hamburger-layer-spacing + vars.$hamburger-layer-height) * -1, 1);
   }
 }
