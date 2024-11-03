@@ -1,11 +1,15 @@
+@use "sass:color";
+
+@use "sass:math";
+
 @use './variables' as *;
 
 $blue-gray: $primary-lighten-7;
 $blue-gray-darken: $nav-primary;
 $blue: $primary-lighten-7;
 $blue-darken: $nav-primary;
-$green: lighten($nav-primary, 10%);
-$green-darken: lighten($nav-primary, 5%);
+$green: color.adjust($nav-primary, $lightness: 10%, $space: hsl);
+$green-darken: color.adjust($nav-primary, $lightness: 5%, $space: hsl);
 $height: $navbar-height-dt;
 $font-size: 0.15*$height;
 
@@ -89,12 +93,12 @@ $font-size: 0.15*$height;
                 position: absolute;
                 top: 0;
                 border: 0 solid $blue;
-                border-width: $height/2 $height/6+1;
+                border-width: $height*0.5 math.div($height, 6)+1;
                 width: 0;
                 height: 0;
             }
             &:before {
-                left: (-1)*($height/3);
+                left: (-1)*math.div($height, 3);
                 border-left-color: transparent;
             }
             &:after {
@@ -192,12 +196,12 @@ $font-size: 0.20*$height;
                 position: absolute;
                 top: 0;
                 border: 0 solid $blue;
-                border-width: $height/2 $height/6+1;
+                border-width: $height*0.5 math.div($height, 6)+1;
                 width: 0;
                 height: 0;
             }
             &:before {
-                left: (-1)*($height/3);
+                left: (-1)*math.div($height, 3);
                 border-left-color: transparent;
             }
             &:after {

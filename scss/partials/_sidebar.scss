@@ -8,9 +8,9 @@ $menu-item-hover-color: rgba(0,0,0,0.03);
 
 .sidebar-nav {
     a,li,ul{
-        @include fluid-type(320px, 1200px, 16px, 18px); 
         font-size: 17px!important;
         z-index: 4; 
+        @include fluid-type(320px, 1200px, 16px, 18px); 
     }
     ul {
         padding: 0; 
@@ -60,19 +60,19 @@ $menu-item-hover-color: rgba(0,0,0,0.03);
     display: flex;
     color: $menu-font-color;
     height: $navbar-height-dt;
-    @media only screen and (max-width: $breakpoint-lg-xl) {
-    height: $navbar-height-mob;
-    }    
     line-height: 0.8;
     justify-content: center;
     align-content: center;
     align-items: center;
     width: 100%;
+    @media only screen and (max-width: $breakpoint-lg-xl) {
+        height: $navbar-height-mob;
+    }    
     h3 {
         font-weight: 70px;
     }
     span{
         font-size:30px;
     }
-    
+
 }

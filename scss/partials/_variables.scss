@@ -1,14 +1,16 @@
+@use "sass:color";
+
 $font-color: #444;
 $nav-primary: #467a91;
 $menu-buttons-color: #ccc;
 $link-color:$nav-primary;
-$link-hover-color:lighten($link-color, 15%);
-$primary-lighten-7: lighten($nav-primary, 7%);
-$primary-lighten-20: lighten($nav-primary, 20%);
-$primary-lighten-30: lighten($nav-primary, 30%);
-$primary-lighten-37: lighten($nav-primary, 37%);
-$primary-lighten-40: lighten($nav-primary, 40%);
-$primary-lighten-45: lighten($nav-primary, 45%);
+$link-hover-color:color.adjust($link-color, $lightness: 15%, $space: hsl);
+$primary-lighten-7: color.adjust($nav-primary, $lightness: 7%, $space: hsl);
+$primary-lighten-20: color.adjust($nav-primary, $lightness: 20%, $space: hsl);
+$primary-lighten-30: color.adjust($nav-primary, $lightness: 30%, $space: hsl);
+$primary-lighten-37: color.adjust($nav-primary, $lightness: 37%, $space: hsl);
+$primary-lighten-40: color.adjust($nav-primary, $lightness: 40%, $space: hsl);
+$primary-lighten-45: color.adjust($nav-primary, $lightness: 45%, $space: hsl);
  
 $primary-bg-color: $primary-lighten-45; // for (slideout) menu and panel!!!
  

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use '../partials/variables' as *;
 
 $navbar-height-dt: 130px;
@@ -6,7 +8,7 @@ $breakpoint-lg-xl: 1170px;
 $font-color: #444;
 $nav-primary: #467a91;
 $link-color:$nav-primary;
-$link-hover-color:lighten($link-color, 15%);
+$link-hover-color:color.adjust($link-color, $lightness: 15%, $space: hsl);
 
 input[type="search"]::-ms-clear {
     /* removes close icon - IE */
@@ -38,11 +40,6 @@ input {
     position: absolute;
     left: 0px;
     padding-left: 5vw;
-    @media only screen and (max-width: $breakpoint-lg-xl) {
-        top: $navbar-height-mob;
-        height: $navbar-height-mob;
-        font-size: 20px;
-    } 
     top: $navbar-height-dt;
     height: $navbar-height-dt;
     font-size: 35px;
@@ -51,6 +48,11 @@ input {
     border: none;
     color: #777;
     overflow: hidden!important;
+    @media only screen and (max-width: $breakpoint-lg-xl) {
+        top: $navbar-height-mob;
+        height: $navbar-height-mob;
+        font-size: 20px;
+    } 
     &:focus {
         outline-color: transparent!important;
     }

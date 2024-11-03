@@ -10,9 +10,11 @@
     @media only screen and (max-width: $breakpoint-lg-xl) {
         height: $navbar-height-mob;
     }
-    z-index: 2;
-    flex-direction: row;
-    font-size: 16px;
+    &{ 
+        z-index: 2;
+        flex-direction: row;
+        font-size: 16px;
+    }
 }
 
 .breadcrumbs-wrapper {
@@ -45,13 +47,13 @@
         align-items: center;
         background: $primary-lighten-7;
         width: $navbar-height-dt;
-        @media only screen and (max-width: $breakpoint-lg-xl) {
-            width: $navbar-height-mob;
-        }
         height: 100%;
         margin-right: 0px;
         margin-right: 0px;
         transition: all 0.2s ease-in-out;
+        @media only screen and (max-width: $breakpoint-lg-xl) {
+            width: $navbar-height-mob;
+        }
         &:hover {
             cursor: pointer;
             opacity: 0.8;

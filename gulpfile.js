@@ -8,7 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 
 // configure the paths
 var watch_dir = './scss/**/*.scss';
-var src_dir = './scss/*.scss';
+var src_dir = './scss/**/*.scss';
 var dest_dir = './css-compiled';
 
 var paths = {

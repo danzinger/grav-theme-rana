@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use './variables' as *;
 .content-header {
     position: absolute;
@@ -63,5 +65,5 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: darken(#467a91, 10%);
+    background: color.adjust(#467a91, $lightness: -10%, $space: hsl);
 }
