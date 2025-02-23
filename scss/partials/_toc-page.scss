@@ -3,12 +3,12 @@
     >ol{
         padding-left: 0!important;
     }
-    ol {
+    & ol {
         counter-reset: item;
         font-weight: 600;
-        ol {
+        & ol {
             font-weight: 300;
-            ol {
+            & ol {
                 font-size: 90%;
             }
         }
