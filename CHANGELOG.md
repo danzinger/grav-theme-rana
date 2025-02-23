@@ -1,6 +1,6 @@
 
 # v1.0.2
-##  31/10/2024
+##  23/02/2025
 
 1. [](#new)
     * Added modular page functionality
