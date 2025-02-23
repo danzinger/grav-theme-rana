@@ -1,4 +1,10 @@
 
+# v1.0.3
+##  23/02/2025
+
+1. [](#bugfix)
+    * Added required fields in blueprints.yaml
+
 # v1.0.2
 ##  23/02/2025
 

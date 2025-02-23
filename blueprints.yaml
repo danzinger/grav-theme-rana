@@ -1,5 +1,7 @@
 name: Rana
-version: 1.0.2
+slug: rana
+type: theme
+version: 1.0.3
 description: A simple app-like mobile first and content-focused Grav theme which is also optimized for large screens.
 icon: rebel
 author:
